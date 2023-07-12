@@ -57,10 +57,105 @@ patients along with target variable (skin cancer classifier) and we have taken t
 variable as ‘y’ which we later categorized into different categories based on skin cancer types in their respective datasets. And used x and y to train and test the CNN model. The overall process will happen inside MetaBlock.    
 - Initially imported the dataset from Kaggle and downloaded.
 - And Used Label encoder to label the data in the target variable which is in
-metadata(CSV file).
+metadata(CSV file).   
 - We resized the image data and converted them into NumPy arrays.
 - Next we reshaped the NumPy array by dividing them with 255.
 - Then we categorized the target variable into 2D array based on number of classes.
 - Later we aggregated features of the image along with target variable.
 - Then we applied CNN model, GoogleNet, VGGNet, RESNet, EfficientNet-B5 to the aggregated features.  Finally compared the accuracies for all architectures.
+***
+### Methodology
+***
+### CNN (Convolutional Neural Networks)   
+CNN is a type of deep learning technique used for image classification and for pixel
+classification data. For identifying and recognition CNN is the best architecture. The
+Another type of neural network that can uncover key information in both time series
+and image data. CNN is also used to identify pattern recognition in the image.   
+
+As we discussed earlier, from convolution to fully connected layer the complexity
+of CNN increases. Convolution is the core part of CNN architecture. In this we do a
+dot product of image pixels and filter which gives an output know as feature map or
+convolved map[1]. Ultimately image is converted into numerical values in this stage
+which helps in extracting image patterns. After this ReLU is applied to it. ReLU helps
+in converting the negative values into zero and keeping the positive values as it is. In
+pooling layer, we reduce the parameters in the input and some information is lost. But
+leaving the disadvantage, this helps to reduce complexity of layer and improves effi-
+ciency of CNN.
+
+Fully Connected network does the image classification based on features that are
+extracted from previous layers. In this our data is flattened into a single array of line
+and these are linked to each other. This linked data extracts each feature from one
+layer and finally give us the output i.e., image classification.   
+
+In previous research papers, They used CNN for processing the image and
+later to get better improvements in accuracy they used 5 models for better image clas-
+sification and for improvement of accuracy in the models of one of the model is Efficient Net B4 which takes less parameters and provides less accuracy we also have
+other types of models like Efficient Net B5 which takes less parameters and give us
+better accuracy than Efficient Net B4 so in this paper we used Efficient Net B5 as one
+of the model in the 5 models which we used.
+
+As we know that in image classification features will be extracted from input im-
+age that is like patterns, based on the image patterns the model will be trained and
+tested accordingly. We use other models to extract shape, color and texture of the
+input image. The main problem we face in this is to combine the features extracted
+from the image and the metadata. So, we use concatenation to link the images and
+metadata in single file and we add extracted images data features in the metadata file
+according to the respective images.   
+
+Usually, Image data has a greater number of features than the features of metadata
+as image data is high dimensional which means it has high resolution. But the metada-
+ta contains only textual format of patient’s records which are less complex than image
+data. So Normal concatenation of data might not work in all the cases. So better aggregation data gives us more accurate results.   
+
+### MetaBlock   
+Now let’s see The mathematical representation of MetaBlock
+Tmetadata = φ(Patients records) 
+Timages = φ(Dermoscopy images) 
+When we combine both metadata and dermoscopy images we will get MetaBlock
+Tmetablock= φ(Patients record + Dermoscopy images) 
+Metablock will enchance the feature extraction from the dermoscopy images.   
+
+### GOOGLE NET
+Google Net was proposed by Google in 2014 to dig deeper into convolutional
+networks. This architecture is very different from other architectures. It is a deep
+convolutional neural network with 22 layers (27 layers including pooling layers),
+some of these layers are total 9 Inception modules. 224 x 224 dimensions of image is taken as input layer for this architecture. This architecture consists of many things,
+like type, patch size, stride, output size, input size, depth, pools, params, ops. In
+convolution’s filters 1x1, 3x3, 5x5 are used in the inception module. Whereas, 1x1 is
+the filters dimensions.   
+
+### RESNET
+Resnet is also known as Residual Network. Residual Network architecture is also
+one of the techniques to increase models working efficiency. Used to skip
+shifts without affecting model performance. On comparing to other architectures, it
+has very deep network (152 layers). Also, this is subject to both vanishing and exploding gradients, impacting model performance when transitioning to the next
+epoch. This leaves a learning framework to facilitate much deeper training networks[19]. With ResNet, you can train hundreds or even thousands of layers and still get convincing performance.   
+
+Here we see that ResNet consists of convolution and pooling steps followed
+by four layers with similar behavior[5]. Each layer follows the same pattern. They
+perform 3x3 convolutions with fixed feature map dimensions (F) [64, 128,
+256, 512], bypassing the input every two convolutions. Also, the width (W) and
+height (H) dimensions are constant throughout the shift.   
+
+### VGG 16
+VGG stands for Visual Geometry Group and is a stand-
+ard multilayer deep convolutional neural network (CNN) architecture. This
+VGG network consists of 140 million parameters. The 16 in VGG16 refers to 16
+layers with weights. VGG16 has 13 convolution layers, 5 max-pooling layers, 3 dense
+layers and 21 layers in total, but only 16 weight layers. The input to the network is an
+image of dimension (224, 224, 3). The first two layers have 64 channels with a filter
+size of 3*3 and the same padding. Then, after a maximum pool layer of stride (2,2), there are two layers of convolution layers with filter size 128 and filter size (3,3).
+
+### EFFICIENT NET B-5
+Efficient Net is a powerful Convolution Neural Network to increase model’s performance. This model does Scaling, Depth balancing and Resolution balancing which
+leads to efficient output. It has 3*3 and 5*5 convolutional layers and refers to the
+various convolutional filters used in the Inception module. It optimizes both accuracy
+and efficiency, measured on a floating-point operations per second (FLOPS) basis.
+This developed architecture uses mobile reverse bottleneck convolution (MBConv).
+
+***
+### Results
+***   
+
+![image](https://github.com/Pavan9303/Skin-Cancer-Detection-/assets/98643288/1954ecce-4940-4067-9dae-271fbf7b32a8)
 
