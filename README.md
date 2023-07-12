@@ -152,6 +152,29 @@ leads to efficient output. It has 3*3 and 5*5 convolutional layers and refers to
 various convolutional filters used in the Inception module. It optimizes both accuracy
 and efficiency, measured on a floating-point operations per second (FLOPS) basis.
 This developed architecture uses mobile reverse bottleneck convolution (MBConv).
+***
+### Dataset
+***
+### HAM 10000
+The HAM10000 dataset, a large collection of multi-sources dermoscopic images
+of common pigmented skin lesions[3]. This dataset contains 10014 dermoscopic
+images of 7 different classes namely melanoma, melanocytic nevus, basal cell carcinoma, actinic keratosis, benign keratosis, dermatofibroma, and vascular lesion.
+The target values and metadata are present in train.csv file. Size of images is
+450*600 pixels.  
+
+![image](https://github.com/Pavan9303/Skin-Cancer-Detection-/assets/98643288/2dc33d37-7dee-462a-b5cd-a334d3b2e49a)   
+**Fig. 2.** Samples of skin cancer in HAM10000 dataset   
+
+### ISIC 2019   
+The ISIC 2019 dataset, a large collection of multi-sources dermoscopic images
+of common pigmented skin lesions[3]. The dataset for ISIC 2019 contains 25,331
+images available for the classification of dermoscopic images among nine different
+diagnostic categories: Melanoma, Melanocytic nevus, Basal cell carcinoma. The
+target values and metadata are present in train.csv file[2]. The size of each image in
+the dataset is 512*512 pixels.   
+
+![image](https://github.com/Pavan9303/Skin-Cancer-Detection-/assets/98643288/b01d7b23-a0da-427a-bd0d-aef2a45e684a)   
+**Fig. 3.** Samples of skin cancer in ISIC 2019 dataset
 
 ***
 ### Results
