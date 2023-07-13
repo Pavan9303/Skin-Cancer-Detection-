@@ -1,5 +1,20 @@
 # Skin-Cancer-Detection
 ## Skin Cancer Detection with Metadata using deeplearning techniques   
+***
+### Abstract
+***
+Nowadays, Skin cancer became a common disease where every 3 in 100 people
+are affecting from skin cancer. Previously doctors used to detect the cancer efficiently, but nowadays they are unable to detect. So, there is a drastic demand for
+computer-based detection systems. Usually, computer detects skin cancer from
+dermoscopic images by using deep learning techniques. Many researchers used
+ML and DL techniques to detect skin cancer and to find accurate results. But they
+did not perform well for new images. In this paper, we added CNN model to
+predict the skin cancer along with that, we proposed a model called Meta Block
+which has metadata along with dermoscopy images of patients that includes all
+records of patients that helps in predicting the cancer more accurately. In this
+paper, we used two different datasets for skin cancer classification and we used
+5 different models and compared the results with previous research results. We
+found that by comparing the accuracies are increased by 10% in ISIC 2019 Dataset and in HAM1000 Dataset it is increased by 15%.
 ***  
 ### Introduction   
 ***
@@ -14,7 +29,7 @@ skin cancer and these cells damage the unaffected and active ones which increase
 damage percentage. Generally, Basal cells produce new skin cells when old skin
 cells are damaged. But when the skin is affected by skin cancer the Basal cells will
 not work properly and will not generate new skin cells. Sooner or later the cancer will
-spread throughout the body as there are no new cells produced, which is very dangerous and may lead to death.
+spread throughout the body as there are no new cells produced, which is very dangerous and may lead to death.   
 
 Dermoscopy is an assistant diagnosis method which is done by taking some
 pictures with the help of computer systems. We used Deep Learning techniques
